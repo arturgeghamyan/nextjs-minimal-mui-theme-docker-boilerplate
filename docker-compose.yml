@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  frontend:
+    ports:
+      - 80:3000
+    build: .
+    container_name: frontend
+    domainname: services.local
+
+networks:
+  default:
+    name: local
+    external: true
